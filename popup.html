@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode AI Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <div class="brand-mark"><img src="assets/icon48_fresh.png" alt="AI"></div>
+      <div>
+        <h1>LeetCode Assistant</h1>
+        <p>Fast help while you solve</p>
+      </div>
+    </header>
+
+    <section class="settings-panel">
+      <label for="ai-provider">Model Provider</label>
+      <select id="ai-provider">
+        <option value="gemini">Google Gemini</option>
+        <option value="openai">OpenAI</option>
+      </select>
+
+      <label for="api-key">API Key</label>
+      <div class="api-row">
+        <input type="password" id="api-key" placeholder="Paste your API key">
+        <button id="save-settings">Save</button>
+      </div>
+    </section>
+
+    <section class="actions-panel">
+      <button class="action" data-ai-action="hint" data-tooltip="Gives a small clue without revealing the full solution.">Hint</button>
+      <button class="action" data-ai-action="approach" data-tooltip="Explains the algorithm idea, steps, and complexity.">Approach</button>
+      <button class="action" data-ai-action="solution" data-tooltip="Generates a complete code solution for the selected language.">Solution</button>
+      <button class="action" data-ai-action="optimize" data-tooltip="Improves your current code for speed, memory, and clarity.">Optimize</button>
+      <button class="action" data-ai-action="debug" data-tooltip="Finds mistakes in your current code and suggests a fix.">Debug</button>
+      <button class="action" data-ai-action="explain" data-tooltip="Breaks down the problem statement in simple words.">Explain</button>
+    </section>
+
+    <div id="loading-indicator" class="loading hidden">Thinking...</div>
+    <section id="ai-response" class="response empty">
+      Open a LeetCode problem and choose an action.
+    </section>
+    <div id="model-info" class="model-info"></div>
+
+    <div class="footer-actions">
+      <button id="copy-response">Copy</button>
+      <button id="insert-code">Insert Code</button>
+    </div>
+  </main>
+
+  <script src="marked.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

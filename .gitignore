@@ -1,0 +1,24 @@
+# Ignore local API keys and sensitive files
+/api_keys.md
+
+# Ignore common editor and OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+*.env
+
+# Ignore node_modules if present
+node_modules/
+
+# Ignore package lock files if you don't want to commit them
+# package-lock.json
+# yarn.lock
+
